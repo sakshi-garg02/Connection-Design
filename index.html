@@ -11,98 +11,117 @@
     <meta name="keywords" content="HTML,CSS" />
     <link rel="stylesheet" href="style.css" />
 
-    <style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
 
-@media screen and (min-width: 360px) {
-  body {
-    background-color: white;
-  }
-}
+    <style>
+      @media screen and (min-width: 360px) {
+        body {
+          background-color: white;
+        }
+      }
+
       h1 {
-        font-size: 20px;
-        margin-top: 17px;
+        font-size: 26px;
+        /* margin-top: 17px;
         margin-bottom: 7px;
         margin-right: 41px;
-        margin-left: 30px;
+        margin-left: 51px; */
         font-family: "Times New Roman", Times, serif;
-        
       }
 
       p {
-
         font-size: 15px;
-    margin-top: 14px;
-    margin-bottom: 10px;
-    margin-right: 39px;
-    margin-left: 15px;
-
-       
+        margin-top: 14px;
+        margin-bottom: 10px;
+        margin-right: 39px;
+        margin-left: 50px;
       }
 
-      img {
-
-        width: 203px;
-    height: 175px;
-    border-radius: 22px;
-    border-top-left-radius: 22px;
-    border-top-right-radius: 22px;
-    border-bottom-right-radius: 22px;
-    border-bottom-left-radius: 22px;
-    margin-right: 11px;
-    margin-left: -9px;
-    object-fit: fill;
-
-
-    
+      .image {
+        border-radius: 22px;
+        margin-right: 11px;
+        margin-top: 29px;
+        margin-left: 17px;
+        object-fit: cover;
       }
-
+      .image img {
+        width: 293px;
+      }
       .button {
+        background-color: #727bfa;
+        border: none;
+        color: white;
+        padding: 6px 8px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 22px 35px 10px 49px;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s;
+        transition-duration: 0.4s;
+        display: inline-block;
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        border-radius: 5px;
+        padding: 8px 16px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: bold;
+      }
 
-  background-color: blue;
-    border: none;
-    color: white;
-    padding: 6px 8px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 22px 35px 10px 49px;
-    cursor: pointer;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    display: inline-block;
-    position: relative;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 6px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: bold;
-}
+      .button2:hover {
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+          0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      }
 
-.button2:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-}
+      .dropdown {
+        position: absolute;
+        display: inline-block;
+      }
 
-      /* #grad1 {
-        height: 666px;
-        margin-top: -278px;
-        background-image: linear-gradient(white, blue);
-        margin-left: -13px;
-        margin-right: -16px;
-      } */
+      .dropdown-content {
+        display: none;
+        margin-right: 44px;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 100px;
+        box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+        padding: 7px 16px;
+        z-index: -1;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
     </style>
   </head>
 
   <body>
-    <h1> HEY THERE!</h1>
-    <img src="images/conn.svg" />
+    <div class="mobile">
+      <h1>HEY THERE!</h1>
 
-    <a class="text">  <I>Welcome  </I> </a>
-    <p style="font-family: Arial">to the <B> CONNECTIONS  </B></p>
-    <!-- <div id="grad1"></div> -->
-    <button class="button button2">Get Started</button>
+      <div class="dropdown">
+        <span> <i class="fa-solid fa-align-right"></i> </span>
 
-    
+        <div class="dropdown-content">
+          <p>Select language</p>
+          <p>Select theme</p>
+        </div>
+      </div>
 
+      <div class="image">
+        <img src="images/conn.svg" />
+      </div>
+
+      <a class="text"> <i>Welcome </i> </a>
+      <p style="font-family: Arial">to the <b> CONNECTIONS </b></p>
+      <!-- <div id="grad1"></div> -->
+      <button class="button button2">Get Started</button>
+    </div>
   </body>
 </html>
